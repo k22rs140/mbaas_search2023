@@ -47,6 +47,14 @@
             })
         }
 
+        function searchDefence() {
+            let defence = parseInt($("#defence").val());
+            let TestDataClass = ncmb.DataStore(db);
+            TestDataClass.equalTo("defence", defence).fetchAll().then(function(results) {
+                showResults(results);
+            })
+        }
+
         function searchLevelGT() {
             let level = parseInt($("#level").val(), 10);
             let TestDataClass = ncmb.DataStore(db);
