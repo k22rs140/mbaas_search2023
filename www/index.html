@@ -63,7 +63,7 @@
             })
         }
 
-        function searchAttackLT() {
+        function searchAttackGT() {
             let attack = parseInt($("#attack").val());
             let TestDataClass = ncmb.DataStore(db);
             TestDataClass.greaterThan("attack", attack).fetchAll().then(function(results) {
@@ -79,7 +79,7 @@
             })
         }
 
-        function searchAttackGT() {
+        function searchAttackLT() {
             let attack = parseInt($("#attack").val());
             let TestDataClass = ncmb.DataStore(db);
             TestDataClass.lessThan("attack", attack).fetchAll().then(function(results) {
